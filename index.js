@@ -1,7 +1,7 @@
 import { config } from "dotenv";
 import { initServer } from "./configs/server.js";
-import { defaultUserAdmin } from "./src/user/user.controller.js";
+import { createCourse } from "./src/course/course.controller.js"
 
 config()
 initServer()
-defaultUserAdmin()
+createCourse()

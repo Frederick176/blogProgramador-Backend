@@ -16,13 +16,14 @@ const publicationSchema = new Schema ({
         required: true
     },
     status: {
-        type
+        type: Boolean,
+        default: true
     }
 },
 {
     timestamps: true,
     versionKey: false
-    
+
 })
 
 export default model("Publication", publicationSchema)

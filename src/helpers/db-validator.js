@@ -1,22 +1,17 @@
-import User from "../user/user.model.js"
+import Publication from '../publications/publication.model.js';
 
-export const emailExist = async (email= "") => {
-    const exist = await User.findOne({email})
+export const validatePublication = async (title="") => {
+    const exist = await Publication.findOne({title});
     if(exist) {
-        throw new Error(`El email: ${email} ya fue registrado`)
+        throw new Error(`publication with title ${title} already exists`);
+
     }
 }
 
-export const userNameExist = async (username= "") => {
-    const exist = await User.findOne({username})
-    if(exist) {
-        throw new Error(`El username: ${username} ya fue registrado`)
-    }
-}
+export const validatePublicationId = async (id="") => {
+    const exist = await Publication.findById(id);
 
-export const userExist = async (uid = "") => {
-    const exist = await User.findById(uid)
     if(!exist) {
-        throw new Error(`No existe un usuario con el ID: ${uid}`)
+        throw new Error(`publication with id ${id} does not exist`);
     }
 }

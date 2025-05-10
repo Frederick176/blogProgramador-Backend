@@ -20,8 +20,8 @@ const swaggerOptions = {
         ]
     },
     apis: [
-        "./src/auth/*.js",
-        "./src/user/*.js"
+        "./src/comments/comment.routes.js",
+        "./src/publications/publication.routes.js",
     ],
 }
 

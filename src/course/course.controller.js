@@ -1,6 +1,6 @@
 import Course from './course.model.js';
 
-export const courseSchema = async () => {
+export const createCourse = async () => {
     const taller = {
         "name": "Taller",
         "description": "El curso de taller es un curso práctico donde los estudiantes aprenderán a desarrollar aplicaciones web utilizando tecnologías modernas.",

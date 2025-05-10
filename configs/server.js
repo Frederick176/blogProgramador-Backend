@@ -2,11 +2,11 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
+import publicarionsRoutes from "../src/publications/publication.routes.js";
+import commentsRoutes from "../src/comments/comment.routes.js";
 import { dbConnection } from "./mongo.js";
 import apiLimiter from "../src/middlewares/request-validator.js";
 import { swaggerDocs, swaggerUi } from "./swagger.js"
-import authRoutes from "../src/auth/auth.routes.js"
-import userRoutes from "../src/user/user.routes.js"
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended: false}))
@@ -33,8 +33,8 @@ const middlewares = (app) => {
 }
 
 const routes = (app) => {
-    app.use("/blog-programador/v1/auth", authRoutes)
-    app.use("/blog-programador/v1/user", userRoutes)
+    app.use("/blog-programador/v1/publications", publicarionsRoutes)
+    app.use("/blog-programador/v1/comments", commentsRoutes)
     app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 
 }
