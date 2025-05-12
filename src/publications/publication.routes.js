@@ -10,14 +10,14 @@ router.post("/add", createPublicationValidator, createPublication);
 
 router.get("/", getPublications);
 
-router.put("/update", updatePublicationValidator, updatePublication);
+router.put("/update:id", updatePublicationValidator, updatePublication);
 
-router.delete("/delete", deletePublicationValidator, deletePublication);
+router.delete("/delete:id", deletePublicationValidator, deletePublication);
 
 router.get("/recent", getPublicationsByDateRecent);
 
 router.get("/old", getPublicationsOld);
 
-router.get("/course", getPublicationsByCourseValidator, getPublicationsByCourse);
+router.get("/course:name", getPublicationsByCourseValidator, getPublicationsByCourse);
 
 export default router;
