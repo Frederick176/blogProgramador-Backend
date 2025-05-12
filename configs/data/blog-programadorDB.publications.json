@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "681fe0f537d32b866bea54e4"
+  },
+  "title": "Información sobre APIS",
+  "description": "La API son muy importantes para desarrollar aplicaciones web funcionables",
+  "course": "Tecnologia",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-10T23:27:49.186Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-10T23:27:49.186Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68213fa9b37986d37006da16"
+  },
+  "title": "Ejercicios de JavScript para practicar",
+  "description": "Teer en cuenta que estos ejercicios no valen puntos, solo es para practicar.",
+  "course": "Practica Supervisada",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-12T00:24:09.353Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-12T00:24:09.353Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68214015b37986d37006da19"
+  },
+  "title": "Creando una aplicación con React y vite",
+  "description": "Para crear un proyecto con React y vite se necesita que prestemos mucha atención.",
+  "course": "Taller",
+  "status": true,
+  "createdAt": {
+    "$date": "2025-05-12T00:25:57.662Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-12T00:25:57.662Z"
+  }
+}]

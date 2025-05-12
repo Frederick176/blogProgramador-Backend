@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "68213ea9fa6f76b02283c332"
+  },
+  "post": "Información sobre APIS",
+  "name": "Ana López",
+  "comment": "Me encantó este artículo, muy útil para principiantes.",
+  "date": {
+    "$date": "2025-05-11T12:00:00.000Z"
+  },
+  "__v": 0
+}]

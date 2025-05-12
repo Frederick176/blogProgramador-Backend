@@ -1,0 +1,45 @@
+{
+	"info": {
+		"_postman_id": "bd133ccc-9e50-4c7f-bd01-ab89b3b6a653",
+		"name": "Blog-Programador",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37606339",
+		"_collection_link": "https://fredy5.postman.co/workspace/IN6BV2025~173226cf-adc8-4287-bed2-15ff1c38aebe/collection/37606339-bd133ccc-9e50-4c7f-bd01-ab89b3b6a653?action=share&source=collection_link&creator=37606339"
+	},
+	"item": [
+		{
+			"name": "Publications",
+			"item": [
+				{
+					"name": "Create Publication",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
