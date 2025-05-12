@@ -8,14 +8,14 @@ export const createPublicationValidator = [
     body("title").custom(validatePublication),
     body("description", "Description is required").notEmpty(),
     body("course", "Course is required").notEmpty(),
-    body("course", "Course must be a valid ObjectId").isMongoId(),
+    body("course", "Course must be a valid").notEmpty(),
     validateField,
     handleErrors
 ]
 
 export const updatePublicationValidator = [
     param("id", "Id is required").notEmpty(),
-    param("id", "Id must be a valid ObjectId").isMongoId(),
+    param("id", "Id must be a valid ObjectId").notEmpty(),
     param("id").custom(validatePublicationId),
     validateField,
     handleErrors

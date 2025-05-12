@@ -11,7 +11,7 @@ const publicationSchema = new Schema ({
         required: true
     },
     course: {
-        type: Schema.Types.ObjectId,
+        type: String,
         ref: "Course",
         required: true
     },

@@ -10,9 +10,9 @@ router.post("/add", createPublicationValidator, createPublication);
 
 router.get("/", getPublications);
 
-router.put("/update/:id", updatePublicationValidator, updatePublication);
+router.put("/update", updatePublicationValidator, updatePublication);
 
-router.delete("/delete/:id", deletePublicationValidator, deletePublication);
+router.delete("/delete", deletePublicationValidator, deletePublication);
 
 router.get("/recent", getPublicationsByDateRecent);
 
