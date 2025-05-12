@@ -30,7 +30,7 @@ export const deletePublicationValidator = [
 ]
 
 export const getPublicationsByCourseValidator = [
-    body("name", "Name course is required").notEmpty(),
+    param("name", "Name course is required").notEmpty(),
     validateField,
     handleErrors
 ]

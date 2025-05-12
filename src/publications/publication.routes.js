@@ -8,7 +8,7 @@ const router = Router();
 
 router.post("/add", createPublicationValidator, createPublication);
 
-router.get("/", getPublications);
+router.get("/all", getPublications);
 
 router.put("/update:id", updatePublicationValidator, updatePublication);
 
