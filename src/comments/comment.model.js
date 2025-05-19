@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose";
 
 const commentSchema = new Schema ({
-    postId: {
+    publicationId: {
         type: Schema.Types.ObjectId,
         ref: "Publication",
         required: true

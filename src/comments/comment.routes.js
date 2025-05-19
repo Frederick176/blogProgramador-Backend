@@ -6,6 +6,6 @@ const router = Router();
 
 router.post("/add", addCommentValidator, createComment);
 
-router.get("/:postId", getCommentsByPublicationValidator, getCommentsByPublication);
+router.get("/:publicationtId", getCommentsByPublicationValidator, getCommentsByPublication);
 
 export default router;

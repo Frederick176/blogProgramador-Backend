@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "bd133ccc-9e50-4c7f-bd01-ab89b3b6a653",
+		"_postman_id": "fe352cc6-62c5-40ef-82b2-3752a4ef03ec",
 		"name": "Blog-Programador",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "37606339",
-		"_collection_link": "https://fredy5.postman.co/workspace/IN6BV2025~173226cf-adc8-4287-bed2-15ff1c38aebe/collection/37606339-bd133ccc-9e50-4c7f-bd01-ab89b3b6a653?action=share&source=collection_link&creator=37606339"
+		"_exporter_id": "41829896"
 	},
 	"item": [
 		{
@@ -13,16 +12,166 @@
 				{
 					"name": "Create Publication",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"adfdfdsafdfdas\",\r\n    \"description\": \"adfasfdfdfdsfds\",\r\n    \"course\": \"682b927a0015a78514fac9ea\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/blog-programador/v1/publications/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"blog-programador",
+								"v1",
+								"publications",
+								"add"
+							]
+						}
 					},
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "List Publications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Pagina web sobre una Alacenadora\",\r\n    \"description\": \"Los mé\",\r\n    \"course\": \"682b927a0015a78514fac9ec\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/blog-programador/v1/publications/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"blog-programador",
+								"v1",
+								"publications",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Publications",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Haciendo una red LAN en el laboratorio\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/blog-programador/v1/publications/update682b98861d480636c5e4001a",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"blog-programador",
+								"v1",
+								"publications",
+								"update682b98861d480636c5e4001a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Publications",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/blog-programador/v1/publications/delete682baafe5f9ff183db2e76e4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"blog-programador",
+								"v1",
+								"publications",
+								"delete682baafe5f9ff183db2e76e4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Course Publications",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/blog-programador/v1/publications/courseTecnologia",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"blog-programador",
+								"v1",
+								"publications",
+								"courseTecnologia"
+							]
+						}
 					},
 					"response": []
 				}
@@ -32,10 +181,36 @@
 			"name": "Comments",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Create Comments",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"publicationId\": \"682b980eeac0837613cc0238\",\r\n    \"name\": \"Fredy\",\r\n    \"comment\": \"Me gusto la teaoria sobre REACT muy clara y consisa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/blog-programador/v1/comments/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"blog-programador",
+								"v1",
+								"comments",
+								"add"
+							]
+						}
 					},
 					"response": []
 				}

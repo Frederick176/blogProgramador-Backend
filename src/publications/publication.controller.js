@@ -46,6 +46,56 @@ export const getPublications = async (req, res) => {
     }
 }
 
+export const getPublicationsByDateRecent = async (req, res) => {
+    try {
+        const publications = await Publication.find({status: true}).populate("course", "teacher").populate("course", "name").sort({createdAt: -1})
+
+        if(!publications || publications.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: "No hay publicaciones disponibles ):"
+            })
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: "Publicaciones obtenidas exitosamente (:",
+            publications: publications
+        })
+    }catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error al obtener las publicaciones ):",
+            error: error.message
+        })
+    }
+}
+
+export const getPublicationsOld = async (req, res) => {
+    try {
+        const publications = await Publication.find({status: true}).populate("course", "teacher").populate("course", "name").sort({createdAt: 1})
+
+        if(!publications || publications.length === 0) {
+            return res.status(404).json({
+                success: false,
+                message: "No hay publicaciones disponibles ):"
+            })
+        }
+
+        return res.status(200).json({
+            success: true,
+            message: "Publicaciones obtenidas exitosamente (:",
+            publications: publications
+        })
+    }catch (error) {
+        return res.status(500).json({
+            success: false,
+            message: "Error al obtener las publicaciones ):",
+            error: error.message
+        })
+    }
+}
+
 export const getPublicationsByCourse = async (req, res) => {
     const { name } = req.body;
 
